@@ -3,17 +3,17 @@ pyramide
 
 |license| |python version| |build-status| |docs| |coverage| |pypi package|
 
-.. |license| image:: https://img.shields.io/github/license/manuvaldes/pyramide.svg
-.. |build-status| image:: https://travis-ci.org/manuvaldes/pyramide.svg?branch=master
+.. |license| image:: https://img.shields.io/github/license/manuvaldes/amigos_del_python.svg
+.. |build-status| image:: https://travis-ci.org/manuvaldes/amigos_del_python.svg?branch=master
     :target: https://travis-ci.org/manuvaldes/pyramide
-.. |docs| image:: https://readthedocs.org/projects/pyramide/badge/?version=latest
+.. |docs| image:: https://readthedocs.org/projects/amigos_del_python/badge/?version=latest
     :target: http://pyramide.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
-.. |coverage| image:: https://coveralls.io/repos/github/manuvaldes/pyramide/badge.svg?branch=master
+.. |coverage| image:: https://coveralls.io/repos/github/manuvaldes/amigos_del_python/badge.svg?branch=master
     :target: https://coveralls.io/github/manuvaldes/pyramide?branch=master
-.. |pypi package| image:: https://badge.fury.io/py/pyramide.svg
+.. |pypi package| image:: https://badge.fury.io/py/amigos_del_python.svg
     :target: https://badge.fury.io/py/pyramide
-.. |python version| image:: https://img.shields.io/pypi/pyversions/pyramide.svg
+.. |python version| image:: https://img.shields.io/pypi/pyversions/amigos_del_python.svg
    :target: https://pypi.python.org/pypi/pyramide
 
 pyramide es un simple crawler basado en crawlerino

@@ -15,3 +15,6 @@ doc:
 
 find-version:
 	egrep --recursive "(version|__version__|release) ?= ?['\"]\d+\.\d+\.\d+['\"]" .
+
+build:
+    python setup.py build bdist_wheel

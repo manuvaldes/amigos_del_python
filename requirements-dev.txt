@@ -6,7 +6,6 @@
 coverage
 pytest
 pytest-cov
-pep8
 
 # required for doc:
 sphinx

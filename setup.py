@@ -6,8 +6,8 @@ import setuptools
 setuptools.setup(
     name="pyramide",
     version="0.0.1",
-    url="https://github.com/manuvaldes/pyramide",
-    download_url = "https://github.com/manuvaldes/pyramide.git",
+    url="https://github.com/manuvaldes/amigos_del_python",
+    download_url = "https://github.com/manuvaldes/amigos_del_python.git",
 
     author="manuvaldes",
     author_email="manuvaldes@gmail.com",

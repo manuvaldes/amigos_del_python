@@ -1,5 +1,1 @@
-# this file installs required dependencies only
-# (ordered alphabetically)
-
-# secondary dependencies
-# (ordered alphabetically)
+#TODO rellena las dependencias que creas que necesita pyramide
