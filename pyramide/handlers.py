@@ -22,10 +22,10 @@ class WordCountHandler(PageHandler):
 
         Return value = whether or not this page's links should be crawled.
         """
-        self._wordcount(soup)  # display unique word counts
-        return True
+        return self._wordcount(soup)  # display unique word counts
 
-    def _wordcount(self,soup):
+
+    def _wordcount(self, soup):
         """Display word counts for a crawled page.
 
         pageresponse = page content; response object from requests module
@@ -35,13 +35,10 @@ class WordCountHandler(PageHandler):
         words on the page and displays the word counts.
         """
         rawtext = soup.get_text()
-        print(rawtext)
         words = WordCountHandler.getwords(rawtext)
         counts, _ = WordCountHandler.getcounts(words)
-        if counts.most_common(1)[0][1] < 10:
-            print('This page does not have any words used more than 10 times.')
-        else:
-            print(counts.most_common(10))
+
+        return counts.most_common(5)
 
     @staticmethod
     def getcounts(words=None):
@@ -56,12 +53,7 @@ class WordCountHandler(PageHandler):
         wordsused = len(counts)
 
         # remove common words from the dictionary
-        shortwords = [word for word in counts if len(word) < 3]
-        ignore = shortwords + \
-                 ['after', 'all', 'and', 'are', 'because', 'been', 'but', 'for', 'from',
-                  'has', 'have', 'her', 'more', 'not', 'now', 'our', 'than', 'that',
-                  'the', 'these', 'they', 'their', 'this', 'was', 'were', 'when', 'who',
-                  'will', 'with', 'year', 'hpv19slimfeature', 'div']
+        ignore = [word for word in counts if len(word) < 4]
         for word in ignore:
             counts.pop(word, None)
 
@@ -78,7 +70,8 @@ class WordCountHandler(PageHandler):
         """Return a list of the words in a text string.
         """
         words = []
-        cruft = ',./():;!"' + "<>'â{}  "  # characters to strip off ends of words
+        # characters to strip off ends of words
+        cruft = ',./():;!"' + "<>'â{}  "
         for raw_word in rawtext.split():
             # remove whitespace before/after the word
             word = raw_word.strip(string.whitespace + cruft + '-').lower()
@@ -94,7 +87,7 @@ class WordCountHandler(PageHandler):
 
     @staticmethod
     def noalpha(word):
-        #TODO puedes refactorizar este bloque usando any()
+        # TODO puedes refactorizar este bloque usando any()
 
         for char in word:
             if char.isalpha():

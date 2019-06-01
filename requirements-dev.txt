@@ -6,6 +6,7 @@
 coverage
 pytest
 pytest-cov
+pytest-sugar
 
 # required for doc:
 sphinx

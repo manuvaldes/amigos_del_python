@@ -3,10 +3,9 @@ pyramide
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: documentation:
+   :caption: index:
 
-   contents/doc.rst
-   contents/pyramide.rst
+   contents/api.rst
 
 
 .. include:: ../../README.rst

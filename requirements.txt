@@ -1,1 +1,3 @@
 #TODO rellena las dependencias que creas que necesita pyramide
+requests
+beautifulsoup4
