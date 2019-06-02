@@ -87,8 +87,7 @@ class WordCountHandler(PageHandler):
 
     @staticmethod
     def noalpha(word):
-        # TODO puedes refactorizar este bloque usando any()
-
+        # TODO refactoriza este bloque en una sola linea usando any()
         for char in word:
             if char.isalpha():
                 return False

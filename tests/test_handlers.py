@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pyramide import handlers
 import pytest
-import bs4
+
 
 #TODO haz un fixture de HTML parseado a partir de este string
 HTML_STRING="""
@@ -12,30 +12,20 @@ HTML_STRING="""
 <p>Esto es un párrafo del documento. Está formado por dos frases.</p>
 </body>
 </html>"""
-
 @pytest.fixture
 def html_soup():
-    return bs4.BeautifulSoup(HTML_STRING, "html.parser")
+    pass
 
 
 #TODO haz un test para la funcion noalpha
 def test_noalpha():
-
-    assert handlers.WordCountHandler.noalpha("a") == False
-    assert handlers.WordCountHandler.noalpha("1") == True
+    pass
 
 #TODO haz un test para la funcion getwords
 def test_getwords():
+    pass
 
-    assert handlers.WordCountHandler.getwords("mario's place") \
-           == ['mario', 'place']
-    assert handlers.WordCountHandler.getwords("") == []
 
 #TODO haz un test de WordCountHandler usando el fixture html_soup
 def test_wordcounthandler(html_soup):
-
-    handler = handlers.WordCountHandler()
-    result = handler.handle(html_soup)
-
-    assert result == [('documento', 2), ('esta', 1), ('cabecera', 1),
-                      ('esto', 1), ('párrafo', 1)]
+    pass
