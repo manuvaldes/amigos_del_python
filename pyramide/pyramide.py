@@ -10,11 +10,6 @@ class Pyramide():
 
     # TODO usa pycharm para añadir documentación del método
     def __init__(self,startpage, singledomain=True):
-        """
-
-        :param startpage:
-        :param singledomain:
-        """
 
         self.startpage = startpage
         self.singledomain = singledomain
