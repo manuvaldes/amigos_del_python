@@ -16,7 +16,9 @@ pyramide
 .. |python version| image:: https://img.shields.io/pypi/pyversions/amigos_del_python.svg
    :target: https://pypi.python.org/pypi/pyramide
 
-pyramide es un simple crawler basado en crawlerino
+pyramide es un simple crawler basado en crawlerino_
+
+.. _crawlerino: https://github.com/dmahugh/crawlerino
 
 install and test
 =======================
@@ -67,20 +69,4 @@ project root directory to build html doc:
 
     $ make doc
 
-Documentation
-=======================
-
-Documentation on `Read The Docs`_.
-
-Meta
-=======================
-
-manuvaldes - manuvaldes@gmail.com
-
-Distributed under the MIT license. See ``LICENSE.txt`` for more information.
-
-https://github.com/manuvaldes
-
-
-.. _Read The Docs: http://pyramide.readthedocs.io/en/latest/
 
