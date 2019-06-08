@@ -39,6 +39,7 @@ class WordCountHandler(PageHandler):
         counts, _ = WordCountHandler.getcounts(words)
 
         print( counts.most_common(5))
+        return True
 
     @staticmethod
     def getcounts(words=None):
