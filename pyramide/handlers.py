@@ -21,11 +21,6 @@ class PageHandler(ABC):
 
 class WordCountHandler(PageHandler):
 
-    def __init__(self,most_common=5):
-
-        self.most_common = most_common
-
-
     def handle(self, soup):
 
         """Display word counts for a crawled page.
@@ -40,7 +35,8 @@ class WordCountHandler(PageHandler):
         words = WordCountHandler.getwords(rawtext)
         counts, _ = WordCountHandler.getcounts(words)
 
-        return counts.most_common(self.most_common)
+        #TODO: tendrás que parametrizar el valor 5, ¿cómo puedes hacerlo?
+        return counts.most_common(5)
 
     @staticmethod
     def getcounts(words=None):
