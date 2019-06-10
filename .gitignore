@@ -47,3 +47,4 @@ docs/_build/
 htmlcov/
 .pytest_cache/
 *toto*
+.idea
