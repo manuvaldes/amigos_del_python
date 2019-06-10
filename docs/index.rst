@@ -5,10 +5,10 @@ pyramide
    :maxdepth: 2
    :caption: index:
 
-   contents/api.rst
+   api.rst
 
 
-.. include:: ../../README.rst
+.. include:: ../README.rst
 
 
 Indices and tables

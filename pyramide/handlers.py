@@ -5,14 +5,8 @@ from abc import ABC, abstractmethod
 
 
 class PageHandler(ABC):
-
+    #TODO Fijate! no habiamos visto el decorador @abstractmethod
     @abstractmethod
-    def handle(self, soup):
-        pass
-
-
-class WordCountHandler(PageHandler):
-
     def handle(self, soup):
         """Function to be customized for processing of a single page.
 
@@ -20,12 +14,20 @@ class WordCountHandler(PageHandler):
         pageresponse = page content; response object from requests module
         soup = Beautiful Soup object created from pageresponse
 
-        Return value = whether or not this page's links should be crawled.
+        Return value = data processed from URL
         """
-        return self._wordcount(soup)  # display unique word counts
+        pass
 
 
-    def _wordcount(self, soup):
+class WordCountHandler(PageHandler):
+
+    def __init__(self,most_common=5):
+
+        self.most_common = most_common
+
+
+    def handle(self, soup):
+
         """Display word counts for a crawled page.
 
         pageresponse = page content; response object from requests module
@@ -38,8 +40,7 @@ class WordCountHandler(PageHandler):
         words = WordCountHandler.getwords(rawtext)
         counts, _ = WordCountHandler.getcounts(words)
 
-        print( counts.most_common(5))
-        return True
+        return counts.most_common(self.most_common)
 
     @staticmethod
     def getcounts(words=None):
