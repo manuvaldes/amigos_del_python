@@ -5,7 +5,6 @@ deploy:
 
 dev: 
 	pip install -r requirements-dev.txt
-	pip install -e .
 
 freeze: 
 	pip freeze | sort | grep -v 'pyramide'
