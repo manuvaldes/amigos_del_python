@@ -59,7 +59,7 @@ class WordCountHandler(PageHandler):
         # remove words that contain no alpha letters
         tempcopy = [_ for _ in words]
         for word in tempcopy:
-            if WordCountHandler.noalpha(word):
+            if not WordCountHandler.has_alpha(word):
                 counts.pop(word, None)
 
         return (counts, wordsused)
@@ -85,9 +85,9 @@ class WordCountHandler(PageHandler):
         return words
 
     @staticmethod
-    def noalpha(word):
+    def has_alpha(word):
         # TODO refactoriza este bloque en una sola linea usando any()
         for char in word:
             if char.isalpha():
-                return False
-        return True
+                return True
+        return False

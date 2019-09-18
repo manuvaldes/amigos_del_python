@@ -17,8 +17,8 @@ def html_soup():
     pass
 
 
-#TODO haz un test para la funcion noalpha
-def test_noalpha():
+#TODO haz un test para la funcion has_alpha
+def test_has_alpha():
     pass
 
 #TODO haz un test para la funcion getwords
