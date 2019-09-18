@@ -35,7 +35,8 @@ class WordCountHandler(PageHandler):
         words = WordCountHandler.getwords(rawtext)
         counts, _ = WordCountHandler.getcounts(words)
 
-        #TODO: tendrás que parametrizar el valor 5, ¿cómo puedes hacerlo?
+        #TODO: tendrás que parametrizar el valor 5,
+        # ¿cómo puedes hacerlo manteniendo retrocompatibilidad?
         return counts.most_common(5)
 
     @staticmethod
