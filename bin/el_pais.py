@@ -7,6 +7,7 @@ if __name__ == '__main__':
     handler = WordCountHandler()
     crawler = Pyramide(startpage="http://www.elpais.es" )
 
+    #TODO procesar un máximo de 5 páginas
     result_data = crawler.run(handler)
 
 
