@@ -21,6 +21,10 @@ class PageHandler(ABC):
 
 class WordCountHandler(PageHandler):
 
+    def __init__(self,max_words=5):
+
+        self.max_words=max_words
+
     def handle(self, soup):
 
         """Display word counts for a crawled page.
@@ -35,8 +39,8 @@ class WordCountHandler(PageHandler):
         words = WordCountHandler.getwords(rawtext)
         counts, _ = WordCountHandler.getcounts(words)
 
-        #TODO: tendrás que parametrizar el valor 5, ¿cómo puedes hacerlo?
-        return counts.most_common(5)
+        #TODO: tendrás que parametrizar el valor 5, ¿cómo puedes hacerlo manteniendo retrocompatibilidad?
+        return counts.most_common(self.max_words)
 
     @staticmethod
     def getcounts(words=None):
